@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brochure Digital – Page Curl</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="layout">
+
+
+    <section class="book-wrap">
+      <button id="btnPrev" class="nav" aria-label="Página anterior">◀</button>
+      <div id="book" class="book" aria-live="polite"></div>
+      <button id="btnNext" class="nav" aria-label="Página siguiente">▶</button>
+    </section>
+
+    <div class="toolbar">
+      <label class="zoom-label">
+        Zoom:
+        <input id="zoomRange" type="range" min="1" max="1.6" step="0.05" value="1" />
+      </label>
+      <label class="sound-label">
+        <input id="soundToggle" type="checkbox" checked />
+        Sonido de hoja
+      </label>
+    </div>
+
+    <p class="hint">Tip: flechas ⬅️➡️, arrastra para pasar página, doble clic para zoom.</p>
+  </main>
+
+  <!-- Usa un archivo local para evitar bloqueos/CORS -->
+  <audio id="flipSnd" preload="auto">
+    <source src="audio/flip.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
